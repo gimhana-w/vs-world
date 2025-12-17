@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #f5f8ff 0%,
+    #e0f0ff 35%,
+    #f5f8ff 65%,
+    #d4e5ff 100%
+  );
+  min-height: 100vh;
+  color: #111827;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0; /* remove outer space so hero spans full width */
+}
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 10; /* keep nav in front of hero background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px 16px; /* remove top gap */
+  margin-bottom: 8px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 72px;
+  height: 90px;
+  /* logo image kept in project root */
+  background: url("./logo.png") center/contain no-repeat;
+  margin-left: 70px;
+}
+
+.brand-text {
+  line-height: 1.1;
+}
+
+.brand-text span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.brand-text strong {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #111827;
+  transition: width 0.2s ease-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #020617;
+  color: #f9fafb;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
+}
+
+/* HERO LAYOUT */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 260px;
+  gap: 32px;
+  align-items: center;
+  margin-top: -124px;
+  padding: 72px 40px 140px;
+  min-height: 700px;
+  min-width: 1200px;
+  border-radius: 32px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Background layer with masked image, sitting behind content */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* hero-bg image shaped by Subtract.svg so background matches Figma */
+  background: url("hero-bg.jpg") center bottom / cover no-repeat;
+  -webkit-mask-image: url("Subtract.svg");
+  mask-image: url("Subtract.svg");
+  -webkit-mask-position: center bottom;
+  mask-position: center bottom;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  z-index: -1;
+  width: 100%;
+}
+
+/* LEFT CARD */
+.side-card {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+}
+
+.side-card-illustration {
+  height: 120px;
+  border-radius: 14px;
+  background: url("bulding.png") center/contain no-repeat;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.side-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.side-card-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.side-card button {
+  align-self: flex-start;
+  padding: 9px 20px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  cursor: pointer;
+}
+
+/* HERO CENTER */
+.hero-center {
+  position: relative;
+  z-index: 1; /* bring text above background shape */
+  text-align: center;
+  color: #132a52;
+  filter: none;
+  backdrop-filter: none;
+}
+
+.hero-kicker {
+  font-size: 18px;
+  color: #a71132;
+  margin-bottom: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-heading {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.hero-heading span {
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: 13px;
+  color: #5d6272;
+  max-width: 520px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  padding: 11px 30px;
+  border-radius: 999px;
+  border: none;
+  background: #9ca3af;
+  color: #f9fafb;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 16px 35px rgba(148, 163, 184, 0.6);
+  transition: background 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-cta:hover {
+  background: #727a84;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(148, 163, 184, 0.75);
+}
+
+/* RIGHT CARD */
+.side-card-right .side-card-illustration {
+  background: url("../hero-right-placeholder.jpg") center/cover no-repeat,
+    linear-gradient(135deg, #0f172a, #38bdf8);
+}
+
+.side-card-right .side-card-title {
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .side-card,
+  .side-card-right {
+    order: 2;
+  }
+
+  .hero-center {
+    order: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding: 16px 16px 40px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .hero-heading {
+    font-size: 36px;
+  }
+
+  .hero-kicker {
+    font-size: 16px;
+  }
+}
+
+
