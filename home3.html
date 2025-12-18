@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Design</title>
+  <link rel="stylesheet" href="./hero3/style.css" />
+</head>
+<body>
+  <!-- Loading overlay -->
+  <div class="loader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <p class="loader-text">Preparing your experience...</p>
+    </div>
+  </div>
+  <header class="nav">
+    <div class="nav-left">
+      <div class="nav-logo">VS ONE</div>
+    </div>
+    <nav class="nav-links">
+      <a href="#solutions">Solutions</a>
+      <a href="#developers">For Developers</a>
+      <a href="#plans">Plans</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="nav-right">
+      <button class="nav-cta">Get Started</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-tag">INNOVATION</span>
+      <h1>For a Connected World</h1>
+      <p>
+        Unlocking the future of smart infrastructure & technology
+        with immersive, human-centered experiences.
+      </p>
+      <button class="hero-button">Schedule a Consultation</button>
+    </div>
+
+    <div class="hero-shapes">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+      <div class="shape s4"></div>
+    </div>
+
+    <div class="hero-cards">
+      <div class="hero-card hero-card-dark">
+        <span class="card-bullet"></span>
+        <h3>BARRIERS</h3>
+      </div>
+      <div class="hero-card hero-card-light">
+        <span class="card-bullet"></span>
+        <h3>INSIGHTS</h3>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader');
+      if (!loader) return;
+      loader.classList.add('hidden');
+      setTimeout(() => {
+        loader.remove();
+      }, 600);
+    });
+  </script>
+</body>
+</html>
