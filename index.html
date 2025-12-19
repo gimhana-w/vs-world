@@ -17,6 +17,15 @@
             <nav class="primary-nav" aria-label="Main Navigation">
                 <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
                 <ul id="nav-menu">
+                    <li class="nav-dropdown">
+                        <a href="#" class="dropdown-toggle">Home <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="index.html">Home (Index)</a>
+                            <a href="home.html">Home 1</a>
+                            <a href="home3.html">Home 3</a>
+                            <a href="home4.html">Home 4</a>
+                        </div>
+                    </li>
                     <li><a href="#solutions">Solutions</a></li>
                     <li><a href="#presence">Global Presence</a></li>
                     <li><a href="#cases">Case Studies</a></li>
@@ -46,41 +55,7 @@
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
-                    <!-- Lines positioned behind hand -->
-                    <svg class="annotation-line-connector line-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0" y1="200" x2="200" y2="0" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                    <svg class="annotation-line-connector line-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="200" y1="0" x2="0" y2="200" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                    
-                    <img src="hand.png" alt="Technology Hand" class="hero-image fade-in-up animate-delay-5" style="transform: scaleX(-1);" />
-                    
-                    <div class="hand-annotation annotation-1">
-                        <a href="#solutions" class="annotation-label">
-                            <svg class="annotation-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M5 21V7L13 2L21 7V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M9 21V13H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <circle cx="12" cy="9" r="1" fill="currentColor"/>
-                            </svg>
-                            <span>Smart building</span>
-                        </a>
-                    </div>
-                    <div class="hand-annotation annotation-2">
-                        <a href="#solutions" class="annotation-label">
-                            <svg class="annotation-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
-                                <path d="M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7" stroke="currentColor" stroke-width="2"/>
-                                <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M8 16H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="18" cy="11" r="2" fill="currentColor"/>
-                            </svg>
-                            <span>Cutting edge technology</span>
-                        </a>
-                    </div>
                     <div class="glow"></div>
- 
                 </div>
             </div>
                 
@@ -116,6 +91,28 @@
                             <span>Google</span>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="hero-feature-cards">
+                <div class="feature-card">
+                    <div class="badge">FEATURE</div>
+                    <h2>Smart Buildings</h2>
+                    <div class="line-box"></div>
+                    <p>
+                        Future-ready ELV systems that optimize safety, comfort, and energy use with intelligent automation.
+                    </p>
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="feature-card">
+                    <div class="badge">FEATURE</div>
+                    <h2>Cutting-edge Technology</h2>
+                    <div class="line-box"></div>
+                    <p>
+                        Advanced solutions powered by AI and IoT to transform your infrastructure and operations.
+                    </p>
+                    <button class="btn">Learn More</button>
                 </div>
             </div>
         </section>
