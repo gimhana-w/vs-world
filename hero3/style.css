@@ -223,9 +223,9 @@
   /* RIGHT SHAPES */
   .hero-shapes {
     position: absolute;
-    right: -600px;
-    top: -170%;
-    transform: rotate(250deg);
+    right:-50%;
+    top: -125%;
+    transform: rotate(248deg);
     width: 1334px;
     height: 1364px;
     z-index: 6;
@@ -242,63 +242,67 @@
     pointer-events: none;
   }
   
-  /* Layered effect - ensure proper stacking order */
+  /* Layered effect - manual positioning */
   .s1 {
-    right: 0;
-    top: 0;
+    right:-300px;
+    top: -2px;
     opacity: 0.25;
-    z-index: 1;
-    background: linear-gradient(180deg, #0a5cff, #0b3ddc);
+    background: linear-gradient(180deg, #0407A6, #0b3ddc);
     transform: translate(0, 0) scale(1);
     will-change: transform, opacity;
     animation:
       shapeEnter1 1.2s ease-out 0.2s forwards,
       floatPro1 14s ease-in-out 1.4s infinite;
+    box-shadow: inset 0 0 10px rgba(0, 255, 242, 0.63);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.788));
   }
   
   .s2 {
-    right: 0;
-    top: 0;
+    right: -195px;
+    top: -40px;
     opacity: 0.35;
-    z-index: 1;
     width: 1280px;
     height: 1310px;
-    background: linear-gradient(180deg, #1e7fff, #0d4de8);
+    background: linear-gradient(180deg, #060ABF, #0d4de8);
     transform: translate(60px, 60px) scale(0.96);
     will-change: transform, opacity;
     animation:
       shapeEnter2 1.2s ease-out 0.5s forwards,
       floatPro2 16s ease-in-out 1.7s infinite;
+    box-shadow: inset 0 0 10px rgba(0, 255, 242, 0.63);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.788));
   }
   
   .s3 {
-    right: 0;
-    top: 0;
+    right: -94px;
+    top: -60px;
     opacity: 0.5;
-    z-index: 3;
     width: 1220px;
     height: 1250px;
-    background: linear-gradient(180deg, #3d9fff, #1a5ff5);
+    background: linear-gradient(180deg, #0004DF, #1a5ff5);
     transform: translate(120px, 120px) scale(0.92);
     will-change: transform, opacity;
     animation:
       shapeEnter3 1.2s ease-out 0.8s forwards,
       floatPro3 18s ease-in-out 2s infinite;
+    box-shadow: inset 0 0 10px rgba(0, 255, 242, 0.63);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.788));
   }
   
   .s4 {
-    right: 0;
-    top: 0;
+    right: -8px;
+    top: -90px;
     opacity: 0.7;
-    z-index: 4;
     width: 1160px;
     height: 1190px;
-    background: linear-gradient(180deg, #5cb8ff, #2a72ff);
+    background: linear-gradient(180deg, #0143f9, #2a72ff);
     transform: translate(180px, 180px) scale(0.87);
     will-change: transform, opacity;
     animation:
       shapeEnter4 1.2s ease-out 1.1s forwards,
       floatPro4 20s ease-in-out 2.3s infinite;
+    box-shadow: inset 0 0 10px rgba(0, 255, 221, 0.63);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.788));
   }
   
 
